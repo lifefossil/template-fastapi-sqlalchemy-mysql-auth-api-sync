@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "template-fastapi-sqlalchemy-mysql-auth-api-sync"
+version = "0.1.0"
+description = ""
+authors = ["oliver <lifefossil@outlook.com>"]
+readme = "README.md"
+packages = [{ include = "src" }]
+
+[tool.poetry.scripts]
+dev = "src.main:start"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.89.1"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+sqlalchemy = "^1.4.46"
+pyjwt = "^2.6.0"
+passlib = "^1.7.4"
+alembic = "^1.9.1"
+python-dotenv = "^0.21.0"
+mysqlclient = "^2.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+sqlalchemy2-stubs = "^0.0.2a31"
+types-passlib = "^1.7.7.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
